@@ -18,7 +18,10 @@ This project documents my hands-on practice with **AWS Identity and Access Manag
     * Attached managed policies (e.g., `AdministratorAccess`) to groups.
     * Simulated permission boundaries using custom policies.
 * **Security Best Practices:** Enforced strong password policies and rotated access keys.
-
+* **IAM Roles:**
+    * Created roles for AWS Services (e.g., EC2) to access S3 buckets securely.
+    * Eliminated the need for hard-coding access keys inside the application code.
+  
 ### 2. AWS CLI Setup
 * Installed AWS CLI on Windows.
 * Configured credentials using `aws configure`.
@@ -27,6 +30,10 @@ This project documents my hands-on practice with **AWS Identity and Access Manag
     aws --version
     aws iam list-users
     ```
+### 3. Security Audit & Best Practices
+* **IAM Credentials Report:** Generated reports to audit all users' status, MFA usage, and access key rotation cycles.
+* **IAM Access Advisor:** Analyzed service last accessed data to identify and remove unused permissions (Service-level least privilege).
+* **Policy Simulator:** Tested IAM policies to verify permissions before attaching them to users/roles.
 
 ## 🎯 Learning Outcomes
 * Understood the difference between Root User and IAM User.
